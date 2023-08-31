@@ -18,7 +18,6 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
-  /* max-width: 1440px; */
 }
 
 a {
@@ -36,6 +35,8 @@ img {
   display: block;
   object-fit: cover;
 }
+
+/* ========== HEADER ========== */
 
 .cap {
   background-color: #fff;
@@ -55,9 +56,6 @@ img {
 .container-cap {
   display: flex;
   justify-content: space-between;
-  /* box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 2px 1px 0px rgba(46, 47, 66, 0.08); */
 }
 
 .navigation {
@@ -93,10 +91,6 @@ img {
 }
 /* ---------------------------------------------------------------------- */
 
-/* .navigation-item {
-  position: relative;
-} */
-
 .link {
   font-family: "Roboto";
   font-size: 16px;
@@ -111,14 +105,10 @@ img {
   font-weight: 500;
 }
 
-/* .navigation-link  */
-
 .first-link {
   color: #404bbf;
   position: relative;
 }
-
-/* .navigation-link */
 
 .first-link::after {
   content: "";
@@ -130,11 +120,6 @@ img {
   border-radius: 2px;
   background: #404bbf;
 }
-
-/* .navigation-link:hover,
-.navigation-link:focus {
-  color: #404bbf;
-} */
 
 .contact {
   font-style: normal;
@@ -148,8 +133,6 @@ img {
 .contact__link {
   color: #434455;
   font-weight: 400;
-  /* transition-property: color;
-  transition-duration: 250ms; */
 }
 
 .link:hover,
@@ -158,6 +141,8 @@ img {
 }
 
 /* -----main----- */
+
+/* ========== HERO ========== */
 
 .section {
   padding-top: 120px;
@@ -215,6 +200,8 @@ img {
   background-color: #404bbf;
 }
 
+/* ================================= */
+
 .title {
   color: #2e2f42;
   font-size: 20px;
@@ -229,6 +216,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
+
+/* ========== SKILLS ========== */
 
 .visually-hidden {
   position: absolute;
@@ -271,6 +260,8 @@ img {
 .skills-title {
   margin-bottom: 8px;
 }
+
+/* ========== TEAM ========== */
 
 .team {
   background-color: #f4f4fd;
@@ -340,6 +331,8 @@ img {
   fill: var(--color-icon);
 }
 
+/* ============================= */
+
 .title-second {
   color: #2e2f42;
   font-size: 36px;
@@ -349,6 +342,8 @@ img {
   text-transform: capitalize;
   text-align: center;
 }
+
+/* ========== PORTFOLIO ========== */
 
 .portfolio__list {
   display: flex;
@@ -409,6 +404,8 @@ img {
   transform: translateY(100%);
 }
 
+/* ========== FOOTER ========== */
+
 .footer {
   background-color: #2e2f42;
   padding: 100px 0;
@@ -450,6 +447,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
+
+/* ================================ */
 
 .social-title {
   color: var(--white-color);
