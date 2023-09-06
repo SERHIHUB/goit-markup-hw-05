@@ -154,11 +154,11 @@ fieldset {
 
 /* ========== MODAL ========== */
 
-.is-hidden {
+/* .is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-}
+} */
 
 /* ============================================== */
 
@@ -173,18 +173,23 @@ fieldset {
     rgba(46, 47, 66, 0.4),
     rgba(46, 47, 66, 0.4)
   );
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form {
+.modal-window {
   background-color: var(--DAIRY);
   max-width: 408px;
+  min-height: 584px;
   border-radius: 4px;
   padding: 72px 24px 24px 24px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-cloce-btn {
@@ -195,63 +200,94 @@ fieldset {
   height: 24px;
   border-radius: 50%;
   background-color: var(--CORNFLOWER);
-  border: 1px solid var(--NAVY-BLUE-modal);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 24px;
   cursor: pointer;
   position: absolute;
   top: 24px;
   right: 24px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
 }
 
-.modal-cloce-btn:active .cloce-icon {
+.modal-cloce-btn:hover,
+.modal-cloce-btn:focus {
+  background-color: #404bbf;
+  border: none;
+}
+
+.cloce-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-cloce-btn:hover .cloce-icon,
+.modal-cloce-btn:focus .cloce-icon {
+  fill: #ffffff;
+}
+
+/* .modal-cloce-btn:active .cloce-icon {
   fill: var(--CORNFLOWER);
-}
+} */
 
-.modal-cloce-btn:active {
+/* .modal-cloce-btn:active {
   background-color: var(--OCEAN);
   border-color: var(--OCEAN);
-}
+} */
 
 .form-title {
   color: var(--NAVY-BLUE);
   text-align: center;
-  font-family: Roboto;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  /* letter-spacing: 0.32px; */
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
 
-.input-item {
-  width: 100%;
-  height: 40px;
-  border-radius: 4px;
-  margin-top: 4px;
+.modal-body {
   margin-bottom: 8px;
-  /* ======================================== */
-  outline: transparent;
+}
+
+.label-item {
+  color: var(--LIGHT-SLATE);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .input-wrap {
   position: relative;
 }
 
-.input-icon {
-  position: absolute;
-  top: 13px;
-  left: 16px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.input-item {
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid rgba(46, 47, 66, 0.4); */
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 38px;
+  /* transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  margin-bottom: 8px;
+  /* ======================================== */
+  outline: transparent;
 }
 
 .input-item,
 .comment {
   border: 1px solid var(--NAVY-BLUE-modal);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =================================================================================== */
+
+.input-icon {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment {
@@ -268,16 +304,6 @@ fieldset {
 .comment::placeholder {
   font-family: Roboto;
   color: var(--NAVY-BLUE-modal);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-}
-
-.label-item {
-  color: var(--LIGHT-SLATE);
-  font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -778,7 +804,7 @@ fieldset {
   color: var(--white-color);
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
