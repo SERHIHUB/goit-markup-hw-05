@@ -520,9 +520,7 @@
         <p class="form-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
           <div class="modal-body">
-            <label class="label-item" for="user-name"
-              ><span class="label-text">Name</span></label
-            >
+            <label class="label-item" for="user-name">Name</label>
             <div class="input-wrap">
               <input
                 id="user-name"
@@ -530,14 +528,12 @@
                 type="text"
                 name="user-name"
               />
-              <svg width="18" height="18" class="input-icon">
+              <svg width="18" height="24" class="input-icon">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
 
-            <label class="label-item" for="user-tel"
-              ><span class="label-text">Phone</span></label
-            >
+            <label class="label-item" for="user-tel">Phone</label>
             <div class="input-wrap">
               <input
                 id="user-tel"
@@ -545,14 +541,12 @@
                 type="tel"
                 name="user-phone"
               />
-              <svg width="18" height="18" class="input-icon">
+              <svg width="18" height="24" class="input-icon">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
 
-            <label class="label-item" for="user-email"
-              ><span class="label-text">Email</span></label
-            >
+            <label class="label-item" for="user-email">Email</label>
             <div class="input-wrap">
               <input
                 id="user-email"
@@ -560,21 +554,22 @@
                 type="email"
                 name="user-email"
               />
-              <svg width="18" height="18" class="input-icon">
+              <svg width="18" height="24" class="input-icon">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
 
             <!-- ================== -->
 
-            <label class="label-item"
-              >Comment
+            <div class="comment-wrapper">
+              <label class="label-item" for="user-comment">Comment</label>
               <textarea
                 class="comment"
-                name="comment"
+                name="user-comment"
                 placeholder="Text input"
+                id="user-comment"
               ></textarea>
-            </label>
+            </div>
           </div>
 
           <div class="checkbox-wrapper">
@@ -582,7 +577,8 @@
               class="visually-hidden checkbox-input"
               id="user-privacy"
               type="checkbox"
-              name="privacy"
+              name="user-privacy"
+              value="true"
             />
             <label class="privacy" for="user-privacy">
               <span class="checkbox-span">
