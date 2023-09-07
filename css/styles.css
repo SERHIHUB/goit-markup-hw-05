@@ -302,7 +302,6 @@ fieldset {
   padding: 8px 16px;
   border-radius: 4px;
   resize: none;
-  margin-top: 4px;
   outline: transparent;
   font-size: 12px;
   line-height: 1.17;
@@ -355,7 +354,7 @@ fieldset {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  border: 1px solid var(--LIGHT-SLATE);
+  border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 1px 2px;
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -384,13 +383,6 @@ fieldset {
 }
 
 /* -------------------------------------------------------------------- */
-
-/* .modal-box-btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .modal-btn {
   display: block;
